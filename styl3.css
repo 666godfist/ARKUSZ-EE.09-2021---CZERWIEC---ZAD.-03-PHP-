@@ -1,0 +1,57 @@
+body{
+    font-family: Verdana;
+    margin: 0px;
+}
+
+.banerlewy{
+    background-color: #29434E;
+    color: white;
+    text-align: center;
+    height: 70px;
+    width: 70%;
+    float: left;
+}
+
+.banerprawy{
+    background-color: #29434E;
+    color: white;
+    width: 30%;
+    height: 70px;
+    float: left;
+}
+
+.listypolecamy, .listyfantastyczne{
+    background-color: #B0BEC5;
+    height: 320px;
+    overflow: scroll;
+    clear: both;
+
+}
+
+.stopka{
+    background-color: #29434E;
+    color: white;
+}
+
+.film{
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+    float: left;
+}
+h4{
+    margin: 0px;
+    text-align: center;
+}
+
+h3{
+    margin: 0px;
+    background-color: #546E7A;
+    color: white;
+}
+
+.zdjecie{
+    width: 226px;
+    height: 150px;
+    background-position-y: center;
+}
