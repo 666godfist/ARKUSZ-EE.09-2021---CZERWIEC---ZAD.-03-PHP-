@@ -25,11 +25,19 @@
             </tr>
         </table>
     </div>
-    
+    <?php
+            $con = mysqli_connect('localhost', 'root', '', 'dane3');
+            if(isset($_POST['id'])){
+                $id = $_POST['id'];
+                $res3 = "DELETE FROM produkty WHERE id = $id";
+                $wynik2 = mysqli_query($con, $res3);
+            }
+            
+        ?>
     <div class="listypolecamy">
         <h3>Polecamy</h3>
         <?php
-            $con = mysqli_connect('localhost', 'root', '', 'dane3');
+            
             $res1 = "SELECT id, nazwa, opis, zdjecie FROM produkty WHERE id IN (18,22,23,25)";
             $cos1 = mysqli_query($con,$res1);
             while($wiersz1 = mysqli_fetch_array($cos1)){
@@ -52,10 +60,14 @@
                     <img src='$wiersz2[3]' alt='film'>
                     <p>$wiersz2[2]</p>
                     </div>";
-            }
+            }mysqli_close($con);
             ?>
     </div>
     <div class="stopka">
+        <form action="video.php" method="post">
+            Usuń film nr: <input type="number" name="id">
+            <input type="submit" value="Usuń film">
+        <br>
         Stronę wykonał: <a href="kozlowskip@gmail.com">Paweł Kozłowski</a>
     </div>
 </body>
